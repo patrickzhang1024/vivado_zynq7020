@@ -4,7 +4,7 @@ This repository contains vivado project for the ZYNQ7020 microcontroller, design
 
 ## Overview
 
-The hardware description can be found in http://www.hellofpga.com/index.php/2023/04/27/smart-zynq-sp/
+
 
 ## Project Structure
 
@@ -18,6 +18,9 @@ zynq7020_vivado_project/
 
 ```
 ## Update logs
+
+### 2025/11/26
+added sd0
 
 ### 2025/11/26
 added qspiflash, debug uart, leds, keys
