@@ -1,9 +1,9 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF9B559E6F0899A3B",
+      "boundary_crc": "0x574B3913FB4D2428",
       "device": "xc7z020clg484-1",
-      "gen_directory": "../../../../zync7020_mini.gen/sources_1/bd/ZYNQ_CORE",
+      "gen_directory": "../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE",
       "name": "ZYNQ_CORE",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
@@ -14,7 +14,9 @@
       "processing_system7_0": "",
       "axi_gpio_0": "",
       "axi_smc": "",
-      "rst_ps7_0_50M": ""
+      "rst_ps7_0_50M": "",
+      "gmii_to_rgmii_0": "",
+      "util_vector_logic_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -249,6 +251,70 @@
             "right": "0"
           }
         }
+      },
+      "MDIO_PHY_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:mdio:1.0",
+        "vlnv": "xilinx.com:interface:mdio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "MDC": {
+            "physical_name": "MDIO_PHY_0_mdc",
+            "direction": "O"
+          },
+          "MDIO_I": {
+            "physical_name": "MDIO_PHY_0_mdio_i",
+            "direction": "I"
+          },
+          "MDIO_O": {
+            "physical_name": "MDIO_PHY_0_mdio_o",
+            "direction": "O"
+          },
+          "MDIO_T": {
+            "physical_name": "MDIO_PHY_0_mdio_t",
+            "direction": "O"
+          }
+        }
+      },
+      "RGMII_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:rgmii:1.0",
+        "vlnv": "xilinx.com:interface:rgmii_rtl:1.0",
+        "port_maps": {
+          "RD": {
+            "physical_name": "RGMII_0_rd",
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "RX_CTL": {
+            "physical_name": "RGMII_0_rx_ctl",
+            "direction": "I"
+          },
+          "RXC": {
+            "physical_name": "RGMII_0_rxc",
+            "direction": "I"
+          },
+          "TD": {
+            "physical_name": "RGMII_0_td",
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "TX_CTL": {
+            "physical_name": "RGMII_0_tx_ctl",
+            "direction": "O"
+          },
+          "TXC": {
+            "physical_name": "RGMII_0_txc",
+            "direction": "O"
+          }
+        }
       }
     },
     "components": {
@@ -276,7 +342,7 @@
             "value": "10.158730"
           },
           "PCW_ACT_ENET0_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "125.000000"
           },
           "PCW_ACT_ENET1_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -285,7 +351,7 @@
             "value": "50.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "200.000000"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -375,7 +441,7 @@
             "value": "50000000"
           },
           "PCW_CLK1_FREQ": {
-            "value": "10000000"
+            "value": "200000000"
           },
           "PCW_CLK2_FREQ": {
             "value": "10000000"
@@ -428,16 +494,28 @@
           "PCW_DQ_WIDTH": {
             "value": "32"
           },
-          "PCW_ENET0_PERIPHERAL_CLKSRC": {
-            "value": "IO PLL"
+          "PCW_ENET0_ENET0_IO": {
+            "value": "EMIO"
+          },
+          "PCW_ENET0_GRP_MDIO_ENABLE": {
+            "value": "1"
+          },
+          "PCW_ENET0_GRP_MDIO_IO": {
+            "value": "EMIO"
           },
           "PCW_ENET0_PERIPHERAL_ENABLE": {
-            "value": "0"
+            "value": "1"
+          },
+          "PCW_ENET0_PERIPHERAL_FREQMHZ": {
+            "value": "1000 Mbps"
           },
           "PCW_ENET1_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
           "PCW_ENET1_PERIPHERAL_ENABLE": {
+            "value": "0"
+          },
+          "PCW_ENET_RESET_ENABLE": {
             "value": "0"
           },
           "PCW_ENET_RESET_POLARITY": {
@@ -456,7 +534,7 @@
             "value": "1"
           },
           "PCW_EN_CLK1_PORT": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_CLK2_PORT": {
             "value": "0"
@@ -492,7 +570,7 @@
             "value": "0"
           },
           "PCW_EN_EMIO_ENET0": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_EMIO_ENET1": {
             "value": "0"
@@ -555,7 +633,7 @@
             "value": "0"
           },
           "PCW_EN_ENET0": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_ENET1": {
             "value": "0"
@@ -653,11 +731,14 @@
           "PCW_FCLK_CLK0_BUF": {
             "value": "TRUE"
           },
+          "PCW_FCLK_CLK1_BUF": {
+            "value": "TRUE"
+          },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
             "value": "50"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "50"
+            "value": "200"
           },
           "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "50"
@@ -666,6 +747,9 @@
             "value": "50"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
+            "value": "1"
+          },
+          "PCW_FPGA_FCLK1_ENABLE": {
             "value": "1"
           },
           "PCW_GP0_EN_MODIFIABLE_TXN": {
@@ -1338,6 +1422,9 @@
           "PCW_P2F_QSPI_INTR": {
             "value": "0"
           },
+          "PCW_P2F_SDIO0_INTR": {
+            "value": "0"
+          },
           "PCW_P2F_UART0_INTR": {
             "value": "0"
           },
@@ -1442,6 +1529,12 @@
           },
           "PCW_SD1_PERIPHERAL_ENABLE": {
             "value": "0"
+          },
+          "PCW_SDIO0_BASEADDR": {
+            "value": "0xE0100000"
+          },
+          "PCW_SDIO0_HIGHADDR": {
+            "value": "0xE0100FFF"
           },
           "PCW_SDIO_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
@@ -2111,6 +2204,35 @@
         "xci_path": "ip\\ZYNQ_CORE_rst_ps7_0_50M_0\\ZYNQ_CORE_rst_ps7_0_50M_0.xci",
         "inst_hier_path": "rst_ps7_0_50M",
         "has_run_ip_tcl": "true"
+      },
+      "gmii_to_rgmii_0": {
+        "vlnv": "xilinx.com:ip:gmii_to_rgmii:4.1",
+        "ip_revision": "19",
+        "xci_name": "ZYNQ_CORE_gmii_to_rgmii_0_0",
+        "xci_path": "ip\\ZYNQ_CORE_gmii_to_rgmii_0_0\\ZYNQ_CORE_gmii_to_rgmii_0_0.xci",
+        "inst_hier_path": "gmii_to_rgmii_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "SupportLevel": {
+            "value": "Include_Shared_Logic_in_Core"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "ip_revision": "5",
+        "xci_name": "ZYNQ_CORE_util_vector_logic_0_0",
+        "xci_path": "ip\\ZYNQ_CORE_util_vector_logic_0_0\\ZYNQ_CORE_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2126,6 +2248,18 @@
           "axi_gpio_0/S_AXI"
         ]
       },
+      "gmii_to_rgmii_0_MDIO_PHY": {
+        "interface_ports": [
+          "MDIO_PHY_0",
+          "gmii_to_rgmii_0/MDIO_PHY"
+        ]
+      },
+      "gmii_to_rgmii_0_RGMII": {
+        "interface_ports": [
+          "RGMII_0",
+          "gmii_to_rgmii_0/RGMII"
+        ]
+      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
@@ -2138,10 +2272,22 @@
           "processing_system7_0/FIXED_IO"
         ]
       },
+      "processing_system7_0_GMII_ETHERNET_0": {
+        "interface_ports": [
+          "processing_system7_0/GMII_ETHERNET_0",
+          "gmii_to_rgmii_0/GMII"
+        ]
+      },
       "processing_system7_0_GPIO_0": {
         "interface_ports": [
           "LED",
           "processing_system7_0/GPIO_0"
+        ]
+      },
+      "processing_system7_0_MDIO_ETHERNET_0": {
+        "interface_ports": [
+          "processing_system7_0/MDIO_ETHERNET_0",
+          "gmii_to_rgmii_0/MDIO_GEM"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {
@@ -2173,10 +2319,17 @@
           "rst_ps7_0_50M/slowest_sync_clk"
         ]
       },
+      "processing_system7_0_FCLK_CLK1": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK1",
+          "gmii_to_rgmii_0/clkin"
+        ]
+      },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
-          "rst_ps7_0_50M/ext_reset_in"
+          "rst_ps7_0_50M/ext_reset_in",
+          "util_vector_logic_0/Op1"
         ]
       },
       "rst_ps7_0_50M_peripheral_aresetn": {
@@ -2184,6 +2337,13 @@
           "rst_ps7_0_50M/peripheral_aresetn",
           "axi_gpio_0/s_axi_aresetn",
           "axi_smc/aresetn"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "gmii_to_rgmii_0/tx_reset",
+          "gmii_to_rgmii_0/rx_reset"
         ]
       }
     },

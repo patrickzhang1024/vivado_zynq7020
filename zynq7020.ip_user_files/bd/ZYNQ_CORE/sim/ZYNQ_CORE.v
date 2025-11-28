@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Thu Nov 27 10:55:11 2025
+//Date        : Fri Nov 28 15:48:29 2025
 //Host        : DESKTOP-LRQP1O5 running 64-bit major release  (build 9200)
 //Command     : generate_target ZYNQ_CORE.bd
 //Design      : ZYNQ_CORE
@@ -39,16 +39,16 @@ module ZYNQ_CORE
     LED_tri_i,
     LED_tri_o,
     LED_tri_t,
-    MDIO_PHY_mdc,
-    MDIO_PHY_mdio_i,
-    MDIO_PHY_mdio_o,
-    MDIO_PHY_mdio_t,
-    RGMII_rd,
-    RGMII_rx_ctl,
-    RGMII_rxc,
-    RGMII_td,
-    RGMII_tx_ctl,
-    RGMII_txc,
+    MDIO_PHY_0_mdc,
+    MDIO_PHY_0_mdio_i,
+    MDIO_PHY_0_mdio_o,
+    MDIO_PHY_0_mdio_t,
+    RGMII_0_rd,
+    RGMII_0_rx_ctl,
+    RGMII_0_rxc,
+    RGMII_0_td,
+    RGMII_0_tx_ctl,
+    RGMII_0_txc,
     UART0_rxd,
     UART0_txd);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
@@ -75,19 +75,19 @@ module ZYNQ_CORE
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 KEY TRI_I" *) (* X_INTERFACE_MODE = "Master" *) input [0:0]KEY_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 KEY TRI_O" *) output [0:0]KEY_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 KEY TRI_T" *) output [0:0]KEY_tri_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 LED TRI_I" *) (* X_INTERFACE_MODE = "Master" *) input [63:0]LED_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 LED TRI_O" *) output [63:0]LED_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 LED TRI_T" *) output [63:0]LED_tri_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_PHY MDC" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME MDIO_PHY, CAN_DEBUG false" *) output MDIO_PHY_mdc;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_PHY MDIO_I" *) input MDIO_PHY_mdio_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_PHY MDIO_O" *) output MDIO_PHY_mdio_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_PHY MDIO_T" *) output MDIO_PHY_mdio_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII RD" *) (* X_INTERFACE_MODE = "Master" *) input [3:0]RGMII_rd;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII RX_CTL" *) input RGMII_rx_ctl;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII RXC" *) input RGMII_rxc;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII TD" *) output [3:0]RGMII_td;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII TX_CTL" *) output RGMII_tx_ctl;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII TXC" *) output RGMII_txc;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 LED TRI_I" *) (* X_INTERFACE_MODE = "Master" *) input [0:0]LED_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 LED TRI_O" *) output [0:0]LED_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 LED TRI_T" *) output [0:0]LED_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_PHY_0 MDC" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME MDIO_PHY_0, CAN_DEBUG false" *) output MDIO_PHY_0_mdc;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_PHY_0 MDIO_I" *) input MDIO_PHY_0_mdio_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_PHY_0 MDIO_O" *) output MDIO_PHY_0_mdio_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:mdio:1.0 MDIO_PHY_0 MDIO_T" *) output MDIO_PHY_0_mdio_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII_0 RD" *) (* X_INTERFACE_MODE = "Master" *) input [3:0]RGMII_0_rd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII_0 RX_CTL" *) input RGMII_0_rx_ctl;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII_0 RXC" *) input RGMII_0_rxc;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII_0 TD" *) output [3:0]RGMII_0_td;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII_0 TX_CTL" *) output RGMII_0_tx_ctl;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII_0 TXC" *) output RGMII_0_txc;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART0 RxD" *) (* X_INTERFACE_MODE = "Master" *) input UART0_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART0 TxD" *) output UART0_txd;
 
@@ -115,19 +115,19 @@ module ZYNQ_CORE
   wire [0:0]KEY_tri_i;
   wire [0:0]KEY_tri_o;
   wire [0:0]KEY_tri_t;
-  wire [63:0]LED_tri_i;
-  wire [63:0]LED_tri_o;
-  wire [63:0]LED_tri_t;
-  wire MDIO_PHY_mdc;
-  wire MDIO_PHY_mdio_i;
-  wire MDIO_PHY_mdio_o;
-  wire MDIO_PHY_mdio_t;
-  wire [3:0]RGMII_rd;
-  wire RGMII_rx_ctl;
-  wire RGMII_rxc;
-  wire [3:0]RGMII_td;
-  wire RGMII_tx_ctl;
-  wire RGMII_txc;
+  wire [0:0]LED_tri_i;
+  wire [0:0]LED_tri_o;
+  wire [0:0]LED_tri_t;
+  wire MDIO_PHY_0_mdc;
+  wire MDIO_PHY_0_mdio_i;
+  wire MDIO_PHY_0_mdio_o;
+  wire MDIO_PHY_0_mdio_t;
+  wire [3:0]RGMII_0_rd;
+  wire RGMII_0_rx_ctl;
+  wire RGMII_0_rxc;
+  wire [3:0]RGMII_0_td;
+  wire RGMII_0_tx_ctl;
+  wire RGMII_0_txc;
   wire UART0_rxd;
   wire UART0_txd;
   wire axi_gpio_0_ip2intc_irpt;
@@ -304,16 +304,16 @@ module ZYNQ_CORE
         .mdio_gem_mdc(processing_system7_0_MDIO_ETHERNET_0_MDC),
         .mdio_gem_o(processing_system7_0_MDIO_ETHERNET_0_MDIO_O),
         .mdio_gem_t(processing_system7_0_MDIO_ETHERNET_0_MDIO_T),
-        .mdio_phy_i(MDIO_PHY_mdio_i),
-        .mdio_phy_mdc(MDIO_PHY_mdc),
-        .mdio_phy_o(MDIO_PHY_mdio_o),
-        .mdio_phy_t(MDIO_PHY_mdio_t),
-        .rgmii_rx_ctl(RGMII_rx_ctl),
-        .rgmii_rxc(RGMII_rxc),
-        .rgmii_rxd(RGMII_rd),
-        .rgmii_tx_ctl(RGMII_tx_ctl),
-        .rgmii_txc(RGMII_txc),
-        .rgmii_txd(RGMII_td),
+        .mdio_phy_i(MDIO_PHY_0_mdio_i),
+        .mdio_phy_mdc(MDIO_PHY_0_mdc),
+        .mdio_phy_o(MDIO_PHY_0_mdio_o),
+        .mdio_phy_t(MDIO_PHY_0_mdio_t),
+        .rgmii_rx_ctl(RGMII_0_rx_ctl),
+        .rgmii_rxc(RGMII_0_rxc),
+        .rgmii_rxd(RGMII_0_rd),
+        .rgmii_tx_ctl(RGMII_0_tx_ctl),
+        .rgmii_txc(RGMII_0_txc),
+        .rgmii_txd(RGMII_0_td),
         .rx_reset(util_vector_logic_0_Res),
         .tx_reset(util_vector_logic_0_Res));
   ZYNQ_CORE_processing_system7_0_0 processing_system7_0

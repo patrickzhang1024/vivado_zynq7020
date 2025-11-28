@@ -19,6 +19,9 @@ zynq7020_vivado_project/
 ```
 ## Update logs
 
+### 2025/11/28
+added ethernet0, fixed project porting issue
+
 ### 2025/11/26
 added sd0
 

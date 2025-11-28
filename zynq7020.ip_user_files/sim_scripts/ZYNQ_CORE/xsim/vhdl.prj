@@ -1,18 +1,18 @@
 vhdl xil_defaultlib  \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_axi_gpio_0_0/sim/ZYNQ_CORE_axi_gpio_0_0.vhd" \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_axi_smc_0/bd_0/ip/ip_1/sim/bd_6a5f_psr_aclk_0.vhd" \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_rst_ps7_0_50M_0/sim/ZYNQ_CORE_rst_ps7_0_50M_0.vhd" \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_clocking.vhd" \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_resets.vhd" \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_support.vhd" \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_reset_sync.vhd" \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_block.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_axi_gpio_0_0/sim/ZYNQ_CORE_axi_gpio_0_0.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_axi_smc_0/bd_0/ip/ip_1/sim/bd_6a5f_psr_aclk_0.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_rst_ps7_0_50M_0/sim/ZYNQ_CORE_rst_ps7_0_50M_0.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_clocking.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_resets.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_support.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_reset_sync.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_block.vhd" \
 
 vhdl2008 xil_defaultlib  \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/ZYNQ_CORE_gmii_to_rgmii_0_0/simulation/demo_tb.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/ZYNQ_CORE_gmii_to_rgmii_0_0/simulation/demo_tb.vhd" \
 
 vhdl xil_defaultlib  \
-"../../../../../zync7020_mini/zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0.vhd" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0.vhd" \
 
 # Do not sort compile order
 nosort

@@ -5,7 +5,7 @@
     "cell_name": "axi_gpio_0",
     "component_reference": "xilinx.com:ip:axi_gpio:2.0",
     "ip_revision": "37",
-    "gen_directory": "../../../../../../zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_axi_gpio_0_0",
+    "gen_directory": "../../../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_axi_gpio_0_0",
     "parameters": {
       "component_parameters": {
         "C_TRI_DEFAULT": [ { "value": "0xFFFFFFFF", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
@@ -59,7 +59,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "37" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../zync7020_mini.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_axi_gpio_0_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_axi_gpio_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2025.1" } ],

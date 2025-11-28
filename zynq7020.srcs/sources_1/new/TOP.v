@@ -26,7 +26,14 @@ module TOP(
   input uart0_rx,
   output uart0_tx,
   output led1,
-  inout led2
+  inout led2,
+  output [3:0]RGMII_0_td,
+  output RGMII_0_tx_ctl,
+  output RGMII_0_txc,
+  input [3:0]RGMII_0_rd,
+  input RGMII_0_rx_ctl,
+  input RGMII_0_rxc,
+  inout MDIO_PHY_0_mdio_io
 );
 
 reg [7:0] rst_delay = 8'd10; 
@@ -65,7 +72,14 @@ ZYNQ_CORE_wrapper u_core(
     .LED_tri_io(led2),
     .KEY_tri_io(key2),
     .UART0_txd(uart0_tx),
-    .UART0_rxd(uart0_rx)
+    .UART0_rxd(uart0_rx),
+    .RGMII_0_td(RGMII_0_td),
+    .RGMII_0_tx_ctl(RGMII_0_tx_ctl),
+    .RGMII_0_txc(RGMII_0_txc),
+    .RGMII_0_rd(RGMII_0_rd),
+    .RGMII_0_rx_ctl(RGMII_0_rx_ctl),
+    .RGMII_0_rxc(RGMII_0_rxc),
+    .MDIO_PHY_0_mdio_io(MDIO_PHY_0_mdio_io)
 );
 
 LED u_led(

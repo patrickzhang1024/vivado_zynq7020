@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Fri Sep 19 18:49:53 2025
+-- Date        : Fri Nov 28 15:35:09 2025
 -- Host        : DESKTOP-LRQP1O5 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top ZYNQ_CORE_axi_gpio_0_0 -prefix
---               ZYNQ_CORE_axi_gpio_0_0_ ZYNQ_CORE_axi_gpio_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               d:/vivaodo2025_project/zynq7020/zynq7020.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_axi_gpio_0_0/ZYNQ_CORE_axi_gpio_0_0_sim_netlist.vhdl
 -- Design      : ZYNQ_CORE_axi_gpio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -59,6 +59,8 @@ entity ZYNQ_CORE_axi_gpio_0_0_address_decoder is
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     s_axi_awready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ZYNQ_CORE_axi_gpio_0_0_address_decoder : entity is "address_decoder";
 end ZYNQ_CORE_axi_gpio_0_0_address_decoder;
 
 architecture STRUCTURE of ZYNQ_CORE_axi_gpio_0_0_address_decoder is
@@ -949,6 +951,8 @@ entity ZYNQ_CORE_axi_gpio_0_0_interrupt_control is
     GPIO_xferAck_i : in STD_LOGIC;
     ip2Bus_RdAck_intr_reg_hole : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ZYNQ_CORE_axi_gpio_0_0_interrupt_control : entity is "interrupt_control";
 end ZYNQ_CORE_axi_gpio_0_0_interrupt_control;
 
 architecture STRUCTURE of ZYNQ_CORE_axi_gpio_0_0_interrupt_control is
@@ -1097,6 +1101,8 @@ entity ZYNQ_CORE_axi_gpio_0_0_xpm_cdc_array_single is
   attribute DEST_SYNC_FF of ZYNQ_CORE_axi_gpio_0_0_xpm_cdc_array_single : entity is 4;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of ZYNQ_CORE_axi_gpio_0_0_xpm_cdc_array_single : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ZYNQ_CORE_axi_gpio_0_0_xpm_cdc_array_single : entity is "xpm_cdc_array_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of ZYNQ_CORE_axi_gpio_0_0_xpm_cdc_array_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -1205,6 +1211,8 @@ entity ZYNQ_CORE_axi_gpio_0_0_GPIO_Core is
     \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].reg2_reg[31]_0\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ZYNQ_CORE_axi_gpio_0_0_GPIO_Core : entity is "GPIO_Core";
 end ZYNQ_CORE_axi_gpio_0_0_GPIO_Core;
 
 architecture STRUCTURE of ZYNQ_CORE_axi_gpio_0_0_GPIO_Core is
@@ -1443,6 +1451,8 @@ entity ZYNQ_CORE_axi_gpio_0_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ZYNQ_CORE_axi_gpio_0_0_slave_attachment : entity is "slave_attachment";
 end ZYNQ_CORE_axi_gpio_0_0_slave_attachment;
 
 architecture STRUCTURE of ZYNQ_CORE_axi_gpio_0_0_slave_attachment is
@@ -2210,6 +2220,8 @@ entity ZYNQ_CORE_axi_gpio_0_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ZYNQ_CORE_axi_gpio_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end ZYNQ_CORE_axi_gpio_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of ZYNQ_CORE_axi_gpio_0_0_axi_lite_ipif is
@@ -2332,6 +2344,8 @@ entity ZYNQ_CORE_axi_gpio_0_0_axi_gpio is
   attribute C_TRI_DEFAULT of ZYNQ_CORE_axi_gpio_0_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
   attribute C_TRI_DEFAULT_2 : string;
   attribute C_TRI_DEFAULT_2 of ZYNQ_CORE_axi_gpio_0_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of ZYNQ_CORE_axi_gpio_0_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of ZYNQ_CORE_axi_gpio_0_0_axi_gpio : entity is "yes";
   attribute ip_group : string;
