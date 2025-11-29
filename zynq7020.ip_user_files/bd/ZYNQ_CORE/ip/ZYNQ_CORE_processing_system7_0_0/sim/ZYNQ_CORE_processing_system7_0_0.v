@@ -74,8 +74,22 @@ ENET0_GMII_RXD,
 GPIO_I, 
 GPIO_O, 
 GPIO_T, 
+I2C0_SDA_I, 
+I2C0_SDA_O, 
+I2C0_SDA_T, 
+I2C0_SCL_I, 
+I2C0_SCL_O, 
+I2C0_SCL_T, 
+I2C1_SDA_I, 
+I2C1_SDA_O, 
+I2C1_SDA_T, 
+I2C1_SCL_I, 
+I2C1_SCL_O, 
+I2C1_SCL_T, 
 UART0_TX, 
 UART0_RX, 
+UART1_TX, 
+UART1_RX, 
 TTC0_WAVE0_OUT, 
 TTC0_WAVE1_OUT, 
 TTC0_WAVE2_OUT, 
@@ -162,8 +176,22 @@ input [7 : 0] ENET0_GMII_RXD;
 input [0 : 0] GPIO_I;
 output [0 : 0] GPIO_O;
 output [0 : 0] GPIO_T;
+input I2C0_SDA_I;
+output I2C0_SDA_O;
+output I2C0_SDA_T;
+input I2C0_SCL_I;
+output I2C0_SCL_O;
+output I2C0_SCL_T;
+input I2C1_SDA_I;
+output I2C1_SDA_O;
+output I2C1_SDA_T;
+input I2C1_SCL_I;
+output I2C1_SCL_O;
+output I2C1_SCL_T;
 output UART0_TX;
 input UART0_RX;
+output UART1_TX;
+input UART1_RX;
 output TTC0_WAVE0_OUT;
 output TTC0_WAVE1_OUT;
 output TTC0_WAVE2_OUT;
@@ -248,7 +276,7 @@ input PS_PORB;
     .C_S_AXI_HP3_DATA_WIDTH(64),
     .C_HIGH_OCM_EN(0),
     .C_FCLK_CLK0_FREQ(50.0),
-    .C_FCLK_CLK1_FREQ(200.0),
+    .C_FCLK_CLK1_FREQ(199.999998),
     .C_FCLK_CLK2_FREQ(10.0),
     .C_FCLK_CLK3_FREQ(10.0),
 	.C_M_AXI_GP0_ENABLE_STATIC_REMAP(0),

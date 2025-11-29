@@ -17,7 +17,29 @@ zynq7020_vivado_project/
         ├── u_pwm/          # pwm verilog file
 
 ```
+
+```
+interface schematic/
+├── PS/
+    ├── I2C0-EMIO/
+        ├── EEPROM/24C02
+    ├── I2C1-EMIO/
+        ├── IMU/MPU6050
+    ├── UART0-EMIO/
+        ├── DEBUG SERIAL/
+    ├── UART1-EMIO/
+        ├── WIFI/ESP8266
+    ├── QSPI/
+        ├── NAND FLASH/W25Q128JV
+    ├── GPIO-EMIO/
+        ├── KEY2
+        ├── LED2
+```
+
 ## Update logs
+
+### 2025/11/29
+added I2C0, I2C1, UART1
 
 ### 2025/11/28
 added ethernet0, fixed project porting issue

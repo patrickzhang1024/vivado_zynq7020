@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x574B3913FB4D2428",
+      "boundary_crc": "0x93BE111EDC2434DC",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE",
       "name": "ZYNQ_CORE",
@@ -187,17 +187,17 @@
           }
         }
       },
-      "UART0": {
+      "UART_0": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
         "vlnv": "xilinx.com:interface:uart_rtl:1.0",
         "port_maps": {
           "TxD": {
-            "physical_name": "UART0_txd",
+            "physical_name": "UART_0_txd",
             "direction": "O"
           },
           "RxD": {
-            "physical_name": "UART0_rxd",
+            "physical_name": "UART_0_rxd",
             "direction": "I"
           }
         }
@@ -315,6 +315,83 @@
             "direction": "O"
           }
         }
+      },
+      "IIC_0": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
+        "vlnv": "xilinx.com:interface:iic_rtl:1.0",
+        "port_maps": {
+          "SDA_I": {
+            "physical_name": "IIC_0_sda_i",
+            "direction": "I"
+          },
+          "SDA_O": {
+            "physical_name": "IIC_0_sda_o",
+            "direction": "O"
+          },
+          "SDA_T": {
+            "physical_name": "IIC_0_sda_t",
+            "direction": "O"
+          },
+          "SCL_I": {
+            "physical_name": "IIC_0_scl_i",
+            "direction": "I"
+          },
+          "SCL_O": {
+            "physical_name": "IIC_0_scl_o",
+            "direction": "O"
+          },
+          "SCL_T": {
+            "physical_name": "IIC_0_scl_t",
+            "direction": "O"
+          }
+        }
+      },
+      "IIC_1": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:iic:1.0",
+        "vlnv": "xilinx.com:interface:iic_rtl:1.0",
+        "port_maps": {
+          "SDA_I": {
+            "physical_name": "IIC_1_sda_i",
+            "direction": "I"
+          },
+          "SDA_O": {
+            "physical_name": "IIC_1_sda_o",
+            "direction": "O"
+          },
+          "SDA_T": {
+            "physical_name": "IIC_1_sda_t",
+            "direction": "O"
+          },
+          "SCL_I": {
+            "physical_name": "IIC_1_scl_i",
+            "direction": "I"
+          },
+          "SCL_O": {
+            "physical_name": "IIC_1_scl_o",
+            "direction": "O"
+          },
+          "SCL_T": {
+            "physical_name": "IIC_1_scl_t",
+            "direction": "O"
+          }
+        }
+      },
+      "UART_1": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
+        "vlnv": "xilinx.com:interface:uart_rtl:1.0",
+        "port_maps": {
+          "TxD": {
+            "physical_name": "UART_1_txd",
+            "direction": "O"
+          },
+          "RxD": {
+            "physical_name": "UART_1_rxd",
+            "direction": "I"
+          }
+        }
       }
     },
     "components": {
@@ -327,7 +404,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
-            "value": "666.666687"
+            "value": "666.666660"
           },
           "PCW_ACT_CAN0_PERIPHERAL_FREQMHZ": {
             "value": "23.8095"
@@ -351,7 +428,7 @@
             "value": "50.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "199.999998"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -363,13 +440,13 @@
             "value": "50"
           },
           "PCW_ACT_PCAP_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "199.999998"
           },
           "PCW_ACT_QSPI_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "199.999998"
           },
           "PCW_ACT_SDIO_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "99.999999"
           },
           "PCW_ACT_SMC_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -381,28 +458,28 @@
             "value": "200.000000"
           },
           "PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "111.111110"
           },
           "PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "111.111110"
           },
           "PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "111.111110"
           },
           "PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "111.111110"
           },
           "PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "111.111110"
           },
           "PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "111.111110"
           },
           "PCW_ACT_TTC_PERIPHERAL_FREQMHZ": {
             "value": "50"
           },
           "PCW_ACT_UART_PERIPHERAL_FREQMHZ": {
-            "value": "100.000000"
+            "value": "99.999999"
           },
           "PCW_ACT_USB0_PERIPHERAL_FREQMHZ": {
             "value": "60"
@@ -411,13 +488,16 @@
             "value": "60"
           },
           "PCW_ACT_WDT_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "111.111110"
           },
           "PCW_APU_CLK_RATIO_ENABLE": {
             "value": "6:2:1"
           },
           "PCW_APU_PERIPHERAL_FREQMHZ": {
             "value": "666.666666"
+          },
+          "PCW_ARMPLL_CTRL_FBDIV": {
+            "value": "40"
           },
           "PCW_CAN0_PERIPHERAL_CLKSRC": {
             "value": "External"
@@ -434,6 +514,12 @@
           "PCW_CAN_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
+          "PCW_CAN_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_CAN_PERIPHERAL_DIVISOR1": {
+            "value": "1"
+          },
           "PCW_CAN_PERIPHERAL_VALID": {
             "value": "0"
           },
@@ -441,7 +527,7 @@
             "value": "50000000"
           },
           "PCW_CLK1_FREQ": {
-            "value": "200000000"
+            "value": "199999998"
           },
           "PCW_CLK2_FREQ": {
             "value": "10000000"
@@ -467,17 +553,32 @@
           "PCW_CPU_PERIPHERAL_CLKSRC": {
             "value": "ARM PLL"
           },
+          "PCW_CPU_PERIPHERAL_DIVISOR0": {
+            "value": "2"
+          },
           "PCW_CRYSTAL_PERIPHERAL_FREQMHZ": {
             "value": "33.333333"
           },
           "PCW_DCI_PERIPHERAL_CLKSRC": {
             "value": "DDR PLL"
           },
+          "PCW_DCI_PERIPHERAL_DIVISOR0": {
+            "value": "15"
+          },
+          "PCW_DCI_PERIPHERAL_DIVISOR1": {
+            "value": "7"
+          },
           "PCW_DCI_PERIPHERAL_FREQMHZ": {
             "value": "10.159"
           },
+          "PCW_DDRPLL_CTRL_FBDIV": {
+            "value": "32"
+          },
           "PCW_DDR_PERIPHERAL_CLKSRC": {
             "value": "DDR PLL"
+          },
+          "PCW_DDR_PERIPHERAL_DIVISOR0": {
+            "value": "2"
           },
           "PCW_DDR_RAM_BASEADDR": {
             "value": "0x00100000"
@@ -503,6 +604,12 @@
           "PCW_ENET0_GRP_MDIO_IO": {
             "value": "EMIO"
           },
+          "PCW_ENET0_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_ENET0_PERIPHERAL_DIVISOR1": {
+            "value": "1"
+          },
           "PCW_ENET0_PERIPHERAL_ENABLE": {
             "value": "1"
           },
@@ -511,6 +618,12 @@
           },
           "PCW_ENET1_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
+          },
+          "PCW_ENET1_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_ENET1_PERIPHERAL_DIVISOR1": {
+            "value": "1"
           },
           "PCW_ENET1_PERIPHERAL_ENABLE": {
             "value": "0"
@@ -579,10 +692,10 @@
             "value": "1"
           },
           "PCW_EN_EMIO_I2C0": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_EMIO_I2C1": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_EMIO_MODEM_UART0": {
             "value": "0"
@@ -621,7 +734,7 @@
             "value": "1"
           },
           "PCW_EN_EMIO_UART1": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_EMIO_WDT": {
             "value": "0"
@@ -642,10 +755,10 @@
             "value": "1"
           },
           "PCW_EN_I2C0": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_I2C1": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_MODEM_UART0": {
             "value": "0"
@@ -705,7 +818,7 @@
             "value": "1"
           },
           "PCW_EN_UART1": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_EN_USB0": {
             "value": "0"
@@ -719,14 +832,38 @@
           "PCW_FCLK0_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
+          "PCW_FCLK0_PERIPHERAL_DIVISOR0": {
+            "value": "5"
+          },
+          "PCW_FCLK0_PERIPHERAL_DIVISOR1": {
+            "value": "4"
+          },
           "PCW_FCLK1_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
+          },
+          "PCW_FCLK1_PERIPHERAL_DIVISOR0": {
+            "value": "5"
+          },
+          "PCW_FCLK1_PERIPHERAL_DIVISOR1": {
+            "value": "1"
           },
           "PCW_FCLK2_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
+          "PCW_FCLK2_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_FCLK2_PERIPHERAL_DIVISOR1": {
+            "value": "1"
+          },
           "PCW_FCLK3_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
+          },
+          "PCW_FCLK3_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
+          "PCW_FCLK3_PERIPHERAL_DIVISOR1": {
+            "value": "1"
           },
           "PCW_FCLK_CLK0_BUF": {
             "value": "TRUE"
@@ -794,11 +931,20 @@
           "PCW_GPIO_PERIPHERAL_ENABLE": {
             "value": "0"
           },
+          "PCW_I2C0_I2C0_IO": {
+            "value": "EMIO"
+          },
           "PCW_I2C0_PERIPHERAL_ENABLE": {
-            "value": "0"
+            "value": "1"
+          },
+          "PCW_I2C1_I2C1_IO": {
+            "value": "EMIO"
           },
           "PCW_I2C1_PERIPHERAL_ENABLE": {
-            "value": "0"
+            "value": "1"
+          },
+          "PCW_I2C_PERIPHERAL_FREQMHZ": {
+            "value": "111.111115"
           },
           "PCW_I2C_RESET_ENABLE": {
             "value": "0"
@@ -811,6 +957,9 @@
           },
           "PCW_INCLUDE_ACP_TRANS_CHECK": {
             "value": "0"
+          },
+          "PCW_IOPLL_CTRL_FBDIV": {
+            "value": "30"
           },
           "PCW_IRQ_F2P_INTR": {
             "value": "1"
@@ -1414,7 +1563,7 @@
             "value": "0"
           },
           "PCW_OVERRIDE_BASIC_CLOCK": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_P2F_GPIO_INTR": {
             "value": "0"
@@ -1457,6 +1606,9 @@
           },
           "PCW_PCAP_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
+          },
+          "PCW_PCAP_PERIPHERAL_DIVISOR0": {
+            "value": "5"
           },
           "PCW_PCAP_PERIPHERAL_FREQMHZ": {
             "value": "200"
@@ -1503,6 +1655,9 @@
           "PCW_QSPI_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
+          "PCW_QSPI_PERIPHERAL_DIVISOR0": {
+            "value": "5"
+          },
           "PCW_QSPI_PERIPHERAL_ENABLE": {
             "value": "1"
           },
@@ -1539,6 +1694,9 @@
           "PCW_SDIO_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
+          "PCW_SDIO_PERIPHERAL_DIVISOR0": {
+            "value": "10"
+          },
           "PCW_SDIO_PERIPHERAL_FREQMHZ": {
             "value": "100"
           },
@@ -1572,6 +1730,9 @@
           "PCW_SMC_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
+          "PCW_SMC_PERIPHERAL_DIVISOR0": {
+            "value": "1"
+          },
           "PCW_SMC_PERIPHERAL_VALID": {
             "value": "0"
           },
@@ -1584,11 +1745,20 @@
           "PCW_SPI_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
           },
+          "PCW_SPI_PERIPHERAL_DIVISOR0": {
+            "value": "6"
+          },
+          "PCW_SPI_PERIPHERAL_FREQMHZ": {
+            "value": "166.666666"
+          },
           "PCW_SPI_PERIPHERAL_VALID": {
             "value": "0"
           },
           "PCW_TPIU_PERIPHERAL_CLKSRC": {
             "value": "External"
+          },
+          "PCW_TPIU_PERIPHERAL_DIVISOR0": {
+            "value": "1"
           },
           "PCW_TRACE_INTERNAL_WIDTH": {
             "value": "2"
@@ -1668,11 +1838,20 @@
           "PCW_UART0_UART0_IO": {
             "value": "EMIO"
           },
-          "PCW_UART1_PERIPHERAL_ENABLE": {
+          "PCW_UART1_GRP_FULL_ENABLE": {
             "value": "0"
+          },
+          "PCW_UART1_PERIPHERAL_ENABLE": {
+            "value": "1"
+          },
+          "PCW_UART1_UART1_IO": {
+            "value": "EMIO"
           },
           "PCW_UART_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
+          },
+          "PCW_UART_PERIPHERAL_DIVISOR0": {
+            "value": "10"
           },
           "PCW_UART_PERIPHERAL_FREQMHZ": {
             "value": "100"
@@ -1681,7 +1860,7 @@
             "value": "1"
           },
           "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
-            "value": "533.333374"
+            "value": "533.333328"
           },
           "PCW_UIPARAM_DDR_ADV_ENABLE": {
             "value": "0"
@@ -2284,6 +2463,18 @@
           "processing_system7_0/GPIO_0"
         ]
       },
+      "processing_system7_0_IIC_0": {
+        "interface_ports": [
+          "IIC_0",
+          "processing_system7_0/IIC_0"
+        ]
+      },
+      "processing_system7_0_IIC_1": {
+        "interface_ports": [
+          "IIC_1",
+          "processing_system7_0/IIC_1"
+        ]
+      },
       "processing_system7_0_MDIO_ETHERNET_0": {
         "interface_ports": [
           "processing_system7_0/MDIO_ETHERNET_0",
@@ -2298,8 +2489,14 @@
       },
       "processing_system7_0_UART_0": {
         "interface_ports": [
-          "UART0",
+          "UART_0",
           "processing_system7_0/UART_0"
+        ]
+      },
+      "processing_system7_0_UART_1": {
+        "interface_ports": [
+          "UART_1",
+          "processing_system7_0/UART_1"
         ]
       }
     },

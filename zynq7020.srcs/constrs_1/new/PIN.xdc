@@ -7,16 +7,38 @@ set_property IOSTANDARD LVCMOS33 [get_ports led1]
 set_property PACKAGE_PIN P21 [get_ports led2]
 set_property IOSTANDARD LVCMOS33 [get_ports led2]
 
-set_property IOSTANDARD LVCMOS33 [get_ports uart0_rx]
-set_property IOSTANDARD LVCMOS33 [get_ports uart0_tx]
-set_property PACKAGE_PIN M17 [get_ports uart0_rx]
-set_property PACKAGE_PIN L17 [get_ports uart0_tx]
-
 set_property PACKAGE_PIN K21 [get_ports key1]
 set_property IOSTANDARD LVCMOS33 [get_ports key1]
 
 set_property PACKAGE_PIN J20 [get_ports key2]
 set_property IOSTANDARD LVCMOS33 [get_ports key2]
+
+set_property IOSTANDARD LVCMOS33 [get_ports UART_0_rx]
+set_property IOSTANDARD LVCMOS33 [get_ports UART_0_tx]
+set_property PACKAGE_PIN M17 [get_ports UART_0_rx]
+set_property PACKAGE_PIN L17 [get_ports UART_0_tx]
+
+set_property IOSTANDARD LVCMOS33 [get_ports UART_1_rx]
+set_property IOSTANDARD LVCMOS33 [get_ports UART_1_tx]
+set_property PACKAGE_PIN G15 [get_ports UART_1_rx]
+set_property PACKAGE_PIN G16 [get_ports UART_1_tx]
+
+set_property PACKAGE_PIN R20 [get_ports IIC_0_scl_io]
+set_property IOSTANDARD LVCMOS33 [get_ports IIC_0_scl_io]
+set_property PACKAGE_PIN R21 [get_ports IIC_0_sda_io]
+set_property IOSTANDARD LVCMOS33 [get_ports IIC_0_sda_io]
+
+set_property PACKAGE_PIN V15 [get_ports IIC_1_scl_io]
+set_property IOSTANDARD LVCMOS33 [get_ports IIC_1_scl_io]
+set_property PACKAGE_PIN V14 [get_ports IIC_1_sda_io]
+set_property IOSTANDARD LVCMOS33 [get_ports IIC_1_sda_io]
+
+set_property PACKAGE_PIN M15 [get_ports SPI_0_io0_io]
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_0_io0_io]
+set_property PACKAGE_PIN N15 [get_ports SPI_0_sck_io]
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_0_sck_io]
+set_property PACKAGE_PIN P15 [get_ports SPI_0_ss_io]
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_0_ss_io]
 
 set_property PACKAGE_PIN G21 [get_ports MDIO_PHY_0_mdc]
 set_property PACKAGE_PIN H22 [get_ports MDIO_PHY_0_mdio_io]

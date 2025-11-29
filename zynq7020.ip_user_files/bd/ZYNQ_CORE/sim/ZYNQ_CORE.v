@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Fri Nov 28 15:48:29 2025
+//Date        : Sat Nov 29 15:23:04 2025
 //Host        : DESKTOP-LRQP1O5 running 64-bit major release  (build 9200)
 //Command     : generate_target ZYNQ_CORE.bd
 //Design      : ZYNQ_CORE
@@ -33,6 +33,18 @@ module ZYNQ_CORE
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    IIC_0_scl_i,
+    IIC_0_scl_o,
+    IIC_0_scl_t,
+    IIC_0_sda_i,
+    IIC_0_sda_o,
+    IIC_0_sda_t,
+    IIC_1_scl_i,
+    IIC_1_scl_o,
+    IIC_1_scl_t,
+    IIC_1_sda_i,
+    IIC_1_sda_o,
+    IIC_1_sda_t,
     KEY_tri_i,
     KEY_tri_o,
     KEY_tri_t,
@@ -49,8 +61,10 @@ module ZYNQ_CORE
     RGMII_0_td,
     RGMII_0_tx_ctl,
     RGMII_0_txc,
-    UART0_rxd,
-    UART0_txd);
+    UART_0_rxd,
+    UART_0_txd,
+    UART_1_rxd,
+    UART_1_txd);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -72,6 +86,18 @@ module ZYNQ_CORE
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SCL_I" *) (* X_INTERFACE_MODE = "Master" *) input IIC_0_scl_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SCL_O" *) output IIC_0_scl_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SCL_T" *) output IIC_0_scl_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_I" *) input IIC_0_sda_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_O" *) output IIC_0_sda_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_0 SDA_T" *) output IIC_0_sda_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_1 SCL_I" *) (* X_INTERFACE_MODE = "Master" *) input IIC_1_scl_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_1 SCL_O" *) output IIC_1_scl_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_1 SCL_T" *) output IIC_1_scl_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_1 SDA_I" *) input IIC_1_sda_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_1 SDA_O" *) output IIC_1_sda_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC_1 SDA_T" *) output IIC_1_sda_t;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 KEY TRI_I" *) (* X_INTERFACE_MODE = "Master" *) input [0:0]KEY_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 KEY TRI_O" *) output [0:0]KEY_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 KEY TRI_T" *) output [0:0]KEY_tri_t;
@@ -88,8 +114,10 @@ module ZYNQ_CORE
   (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII_0 TD" *) output [3:0]RGMII_0_td;
   (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII_0 TX_CTL" *) output RGMII_0_tx_ctl;
   (* X_INTERFACE_INFO = "xilinx.com:interface:rgmii:1.0 RGMII_0 TXC" *) output RGMII_0_txc;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART0 RxD" *) (* X_INTERFACE_MODE = "Master" *) input UART0_rxd;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART0 TxD" *) output UART0_txd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 RxD" *) (* X_INTERFACE_MODE = "Master" *) input UART_0_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_0 TxD" *) output UART_0_txd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_1 RxD" *) (* X_INTERFACE_MODE = "Master" *) input UART_1_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 UART_1 TxD" *) output UART_1_txd;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -112,6 +140,18 @@ module ZYNQ_CORE
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire IIC_0_scl_i;
+  wire IIC_0_scl_o;
+  wire IIC_0_scl_t;
+  wire IIC_0_sda_i;
+  wire IIC_0_sda_o;
+  wire IIC_0_sda_t;
+  wire IIC_1_scl_i;
+  wire IIC_1_scl_o;
+  wire IIC_1_scl_t;
+  wire IIC_1_sda_i;
+  wire IIC_1_sda_o;
+  wire IIC_1_sda_t;
   wire [0:0]KEY_tri_i;
   wire [0:0]KEY_tri_o;
   wire [0:0]KEY_tri_t;
@@ -128,8 +168,10 @@ module ZYNQ_CORE
   wire [3:0]RGMII_0_td;
   wire RGMII_0_tx_ctl;
   wire RGMII_0_txc;
-  wire UART0_rxd;
-  wire UART0_txd;
+  wire UART_0_rxd;
+  wire UART_0_txd;
+  wire UART_1_rxd;
+  wire UART_1_txd;
   wire axi_gpio_0_ip2intc_irpt;
   wire [8:0]axi_smc_M00_AXI_ARADDR;
   wire axi_smc_M00_AXI_ARREADY;
@@ -355,6 +397,18 @@ module ZYNQ_CORE
         .GPIO_I(LED_tri_i),
         .GPIO_O(LED_tri_o),
         .GPIO_T(LED_tri_t),
+        .I2C0_SCL_I(IIC_0_scl_i),
+        .I2C0_SCL_O(IIC_0_scl_o),
+        .I2C0_SCL_T(IIC_0_scl_t),
+        .I2C0_SDA_I(IIC_0_sda_i),
+        .I2C0_SDA_O(IIC_0_sda_o),
+        .I2C0_SDA_T(IIC_0_sda_t),
+        .I2C1_SCL_I(IIC_1_scl_i),
+        .I2C1_SCL_O(IIC_1_scl_o),
+        .I2C1_SCL_T(IIC_1_scl_t),
+        .I2C1_SDA_I(IIC_1_sda_i),
+        .I2C1_SDA_O(IIC_1_sda_o),
+        .I2C1_SDA_T(IIC_1_sda_t),
         .IRQ_F2P(axi_gpio_0_ip2intc_irpt),
         .MIO(FIXED_IO_mio),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
@@ -399,8 +453,10 @@ module ZYNQ_CORE
         .PS_CLK(FIXED_IO_ps_clk),
         .PS_PORB(FIXED_IO_ps_porb),
         .PS_SRSTB(FIXED_IO_ps_srstb),
-        .UART0_RX(UART0_rxd),
-        .UART0_TX(UART0_txd));
+        .UART0_RX(UART_0_rxd),
+        .UART0_TX(UART_0_txd),
+        .UART1_RX(UART_1_rxd),
+        .UART1_TX(UART_1_txd));
   ZYNQ_CORE_rst_ps7_0_50M_0 rst_ps7_0_50M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),

@@ -149,11 +149,6 @@ vlog -work xil_defaultlib  -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnect_v
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_rst_ps7_0_50M_0/sim/ZYNQ_CORE_rst_ps7_0_50M_0.vhd" \
-
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ipshared/ec67/hdl" "+incdir+../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ipshared/6cfa/hdl" "+incdir+../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ipshared/f0b6/hdl/verilog" "+incdir+../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ipshared/a8e4/hdl/verilog" "+incdir+E:/xilinx_2025_1/2025.1/Vivado/data/rsb/busdef" "+incdir+E:/xilinx_2025_1/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/ZYNQ_CORE/sim/ZYNQ_CORE.v" \
-
-vcom -work xil_defaultlib  -93  \
 "../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_clocking.vhd" \
 "../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_resets.vhd" \
 "../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_gmii_to_rgmii_0_0/synth/ZYNQ_CORE_gmii_to_rgmii_0_0_support.vhd" \
@@ -174,6 +169,7 @@ vlog -work util_vector_logic_v2_0_5  -incr -mfcu  "+incdir+../../../../zynq7020.
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ipshared/ec67/hdl" "+incdir+../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ipshared/6cfa/hdl" "+incdir+../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ipshared/f0b6/hdl/verilog" "+incdir+../../../../zynq7020.gen/sources_1/bd/ZYNQ_CORE/ipshared/a8e4/hdl/verilog" "+incdir+E:/xilinx_2025_1/2025.1/Vivado/data/rsb/busdef" "+incdir+E:/xilinx_2025_1/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_util_vector_logic_0_0/sim/ZYNQ_CORE_util_vector_logic_0_0.v" \
+"../../../bd/ZYNQ_CORE/sim/ZYNQ_CORE.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
