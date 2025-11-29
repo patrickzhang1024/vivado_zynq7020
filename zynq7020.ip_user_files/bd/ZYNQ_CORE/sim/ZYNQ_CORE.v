@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Sat Nov 29 15:23:04 2025
+//Date        : Sun Nov 30 00:43:48 2025
 //Host        : DESKTOP-LRQP1O5 running 64-bit major release  (build 9200)
 //Command     : generate_target ZYNQ_CORE.bd
 //Design      : ZYNQ_CORE
@@ -456,7 +456,8 @@ module ZYNQ_CORE
         .UART0_RX(UART_0_rxd),
         .UART0_TX(UART_0_txd),
         .UART1_RX(UART_1_rxd),
-        .UART1_TX(UART_1_txd));
+        .UART1_TX(UART_1_txd),
+        .USB0_VBUS_PWRFAULT(1'b0));
   ZYNQ_CORE_rst_ps7_0_50M_0 rst_ps7_0_50M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),

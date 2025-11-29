@@ -21,6 +21,7 @@ zynq7020_vivado_project/
 ```
 interface schematic/
 ├── PS/
+    ├── USB0-MIO/
     ├── I2C0-EMIO/
         ├── EEPROM/24C02
     ├── I2C1-EMIO/
@@ -37,6 +38,9 @@ interface schematic/
 ```
 
 ## Update logs
+
+### 2025/11/30
+added USB0
 
 ### 2025/11/29
 added I2C0, I2C1, UART1
